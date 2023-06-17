@@ -13,7 +13,7 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return None
+    return is_odd (a_number)
 
 
 def fix_it(moves=True, should_move=True):
@@ -31,7 +31,7 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    return 
 
 
 def loops_preview():
