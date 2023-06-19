@@ -33,5 +33,27 @@ def advancedGuessingGame():
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 
+    
+    import random
+
+def validate_integer_input(input_str):
+    int()
+def prompt_for_integer_input(message):
+    user_input = int(input(message))
+    return input
+def advancedGuessingGame():
+    print("Welcome to the advanced guessing game!")
+    lower_bound = prompt_for_integer_input()
+    upper_bound = prompt_for_integer_input()
+
+    actualNumber = random.randint(lower_bound, upper_bound)
+    guessed = False
+        if guessedNumber == actualNumber:
+            print("You got it!!")
+            guessed = True
+    return "You got it!"
+
+
+
 if __name__ == "__main__":
     print(advancedGuessingGame())
