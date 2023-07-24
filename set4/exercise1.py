@@ -3,7 +3,8 @@
 
 import json
 import os
-import requests
+
+# import requests
 import inspect
 import sys
 
@@ -37,9 +38,10 @@ def get_some_details():
          dictionary, you'll need integer indeces for lists, and named keys for
          dictionaries.
     """
-    json_data = open(LOCAL + "/lazyduck.json").read()
+    json_data = open(LOCAL + "/lazyduck.json")
 
-    data = json.loads(json_data)
+    data = json.loads(json_data.read())
+    json_data.close()
     return {"lastName": None, "password": None, "postcodePlusID": None}
 
 

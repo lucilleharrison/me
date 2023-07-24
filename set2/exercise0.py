@@ -66,7 +66,7 @@ def shout(a_string):
     they all do different things. You'll need to actually read the
     docs to find out which one you actually need.
     """
-    the_answer = shout (a_string)
+    the_answer = a_string.upper()
     return the_answer
 
 
@@ -79,7 +79,7 @@ def really_shout(a_string):
     that you've reused the function you already wrote.
     Look up how to 'concatinate' strings to make this happen.
     """
-    the_answer = really_shout (a_string)
+    the_answer = shout(a_string) + "!"
     return the_answer
 
 
@@ -95,7 +95,9 @@ def shout_with_a_number(a_string, a_number):
     challenge, see if you can make the test pass with at least two ways
     of doing the same job.
     """
-    the_answer = shout_with_a_number (a_string, a_number)
+    the_answer = shout(a_string) + " " + str(a_number)
+    the_answer = f"{shout(a_string)} {a_number}"
+
     return the_answer
 
 
