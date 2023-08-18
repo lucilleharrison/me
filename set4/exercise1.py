@@ -42,7 +42,8 @@ def get_some_details():
 
     data = json.loads(json_data.read())
     json_data.close()
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    return {"lastName": last_name, "password": password, "postcodePlusID": postcode_plus_id}
+
 
 
 def wordy_pyramid():
@@ -80,8 +81,14 @@ def wordy_pyramid():
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
     pyramid = []
-
+for length in range(3, 21, 2):
+        response = requests.get(base_url + str(length))
+        if response.status_code == 200:
+            word = response.text.strip()  
+            pyramid.append(word)
+    
     return pyramid
+
 
 
 def pokedex(low=1, high=5):
