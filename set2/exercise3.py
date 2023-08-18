@@ -128,8 +128,8 @@ def loops_3():
     block_numbers = []
     for i in range(10):
         row = []
-        for i in range(10):
-            row.append(str(block_numbers))
+        for j in range(10):
+            row.append(str(i))
         block_numbers.append(row)
     return block_numbers
 
@@ -155,10 +155,10 @@ def loops_4():
     block = []
     for i in range(10):
         row = []
-        for i in range(10):
-            row.append(str(10))
-            block.append(row)
-            return block
+        for j in range(10):
+            row.append(str(j))
+        block.append(row)
+    return block
 
 
 def loops_5():

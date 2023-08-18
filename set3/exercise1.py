@@ -60,7 +60,7 @@ def not_number_rejector(message):
     while number is None:
         response = input(message)
         number = int(response)
-        return none 
+        return number 
 
 
 def super_asker(low, high):
@@ -75,7 +75,7 @@ def super_asker(low, high):
     while number is None or number < low or number > high:
         response = input({low} and {high}:)
         number = int(response)
-    return None
+    return super_asker(low, high), number
 
 
 if __name__ == "__main__":
